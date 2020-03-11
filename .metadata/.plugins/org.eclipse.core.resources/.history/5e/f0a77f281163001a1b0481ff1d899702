@@ -1,0 +1,162 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PFont;
+import processing.core.PImage;
+import controlP5.*;
+
+public class Tesla extends PApplet {
+
+	private ControlP5 cp5;
+	PImage primera;
+	PImage segunda;
+	PImage tercera;
+	PImage cuarta;
+	PImage quinta;
+	PImage sexta;
+	PImage registroGris;
+	PImage compraMenu;
+	public int pantallas;
+	public boolean pantalla1;
+	public boolean pantalla2;
+	public boolean pantalla3;
+	public boolean pantalla4;
+	PFont font;
+	usuarioSinRegistrar UserNoRegister;
+	usuarioRegistrado UserRegistered;
+	usuarioIniciarSesion UserInitSession;
+	menu Menu;
+	historial historial;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		PApplet.main("tesla.Tesla");
+
+	}
+
+	public void settings() {
+
+		size(414, 896);
+		// size(828,1792);
+	}
+
+	public void setup() {
+		cp5 = new ControlP5(this);
+		pantallas = 0;
+		primera = loadImage("tesla/imagenes/primera.jpg");
+		segunda = loadImage("tesla/imagenes/pagina2.png");
+		tercera = loadImage("tesla/imagenes/pagina3.png");
+		cuarta = loadImage("tesla/imagenes/pagina5.png");
+		quinta = loadImage("tesla/imagenes/pagina6.png");
+		//sexta = loadImage("tesla/imagenes/pagina6.png");
+		compraMenu = loadImage("tesla/imagenes/compraMenu.png");
+		pantalla1 = true;
+		pantalla2 = false;
+		pantalla3 = false;
+		pantalla4 = false;
+		UserNoRegister = new usuarioSinRegistrar(0, 0, 414, 896, this);
+		UserRegistered = new usuarioRegistrado(0, 0, 414, 896, this);
+		UserInitSession = new usuarioIniciarSesion(0, 0, 414, 896, this);
+		historial = new historial (0, 0, 414, 896, this);
+		Menu = new menu( 0, 0, 414, 896, this);
+		font = createFont("CovesBold.otf", 30);
+		/*
+		 * if (pantalla2 == true) { escritosRegistro(); USR.crearPantalla();
+		 * 
+		 * }
+		 */
+		//escritosParaRegistro();
+		//escritosParaInicioSesion();
+
+	}
+
+	public void draw() {
+		background(255);
+		fill(0);
+		
+		UserNoRegister.crearPantalla();
+		UserNoRegister.feedBack();
+		/*UserRegistered.crearPantalla();
+		UserRegistered.feedback();*/
+		/*UserInitSession.crearPantalla();
+		UserInitSession.feedBack();*/
+		/*Menu.crearPantalla();
+		Menu.feedBack();*/
+		/*historial.crearPantalla();
+		historial.feedBack();*/
+		/*switch(pantallas) {
+		case 0: 
+			image (primera,0,0,414,896);
+		break;
+		case 1:
+			image (segunda,0,0,414,896);
+		break;
+		case 2:
+			image (tercera,0,0,414,896);
+		break;
+		case 3: 
+			image (cuarta,0,0,414,896);
+		break;
+		case 4: 
+			image (quinta,0,0,414,896);
+		break;
+		case 5: 
+			//image (sexta,0,0,414,896);
+		break;
+		case 6: 
+			//image (primera,0,0,414,896);
+		break;
+		}
+		if(frameCount == 10) {
+			pantallas++;
+		}
+		if(frameCount == 20) {
+			pantallas++;
+		}
+		if(frameCount == 30) {
+			pantallas++;
+		}
+		if(frameCount == 40) {
+			pantallas++;
+		}
+		if(frameCount == 50) {
+			pantallas++;
+		}*/
+		//image (compraMenu, 0, 0, 414, 1281);
+		
+		fill(0);
+		text("X:" + mouseX + "Y:" + mouseY, mouseX, mouseY);
+	}
+
+	public void mousePressed() {
+		
+	}
+
+	public void escritosParaRegistro() {
+		
+		cp5.addTextfield("usuario").setPosition(32, 505).setSize(350, 36).setFont(font).setFocus(true)
+				.setColor(color(255, 255, 255)).setColorBackground(color(255, 255, 255, 1));
+
+		cp5.addTextfield("contraseña").setPosition(32, 585).setSize(350, 36).setPasswordMode(true).setFocus(true)
+				.setColor(color(255, 255, 255)).setColorBackground(color(255, 255, 255, 1));
+
+		cp5.addTextfield("correo").setPosition(32, 664).setSize(350, 36).setColorActive(150).setFont(font)
+				.setFocus(true).setColor(color(255, 255, 255)).setColorBackground(color(255, 255, 255, 1));
+
+		cp5.addButton("ingresar").setValue(0).setPosition(255, 737).setSize(138, 38).setColorBackground(255);
+		
+	}
+
+	public void escritosParaInicioSesion() {
+		
+		cp5.addTextfield("usuario").setPosition(32, 563).setSize(350, 36).setFont(font).setFocus(true)
+				.setColor(color(255, 255, 255)).setColorBackground(color(255, 255, 255, 1));
+
+		cp5.addTextfield("contraseña").setPosition(32, 641).setSize(350, 36).setPasswordMode(true).setFocus(true)
+				.setColor(color(255, 255, 255)).setColorBackground(color(255, 255, 255, 1));
+		
+	}
+	
+
+}

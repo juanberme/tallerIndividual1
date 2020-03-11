@@ -1,0 +1,28 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class usuarioIniciarSesion extends pantallas {
+
+	private PApplet app2;
+	private PImage usuarioInicio;
+
+	public usuarioIniciarSesion(int posX, int posY, int tamX, int tamY, PApplet app2) {
+		super(posX, posY, tamX, tamY);
+
+		this.app2 = app2;
+
+	}
+
+	public void crearPantalla() {
+		usuarioInicio = app2.loadImage("tesla/imagenes/iniciarSesion.jpg");
+		app2.image(usuarioInicio, posX, posY, tamX, tamY);
+
+	}
+	
+	public void cambioPantalla() {
+		
+	}
+
+}

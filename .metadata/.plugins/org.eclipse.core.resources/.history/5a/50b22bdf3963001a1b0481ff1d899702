@@ -1,0 +1,89 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class compra extends pantallas {
+
+	PApplet app6;
+	PImage menuCompra;
+	PImage modelX;
+	PImage modelS;
+	PImage model3;
+	PImage scroll;
+	PImage comprarGris;
+	PImage compararGris;
+	PImage scrollUp;
+	private int posY1;
+	private int posY2;
+	private int posY3;
+
+	public compra(int posX, int posY, int tamX, int tamY, PApplet app6) {
+		super(posX, posY, tamX, tamY);
+		this.app6 = app6;
+		this.posY1 = posY;
+		this.posY2 = posY;
+	}
+
+	public void crearMenu() {
+		menuCompra = app6.loadImage("tesla/imagenes/finalMenu.png");
+		app6.image(menuCompra, posX, posY, tamX, tamY);
+		//comprar gris
+		comprarGris = app6.loadImage("tesla/imagenes/comprarChiquitoGris.png");
+		if(app6.mouseX > 76 && app6.mouseX < 196 && app6.mouseY > 301 && app6.mouseY < 335) {
+			app6.image(comprarGris, 76, 301, 118, 33);
+		}
+		//comPARAR gris
+		compararGris = app6.loadImage("tesla/imagenes/compararMenuGris.png");
+		
+		
+		
+		//app6.image(menuCompra, posX, posY1, tamX, 1281);
+		/*hacerScroll();
+		subirScroll();*/
+
+	}
+
+	/*public void hacerScroll() {
+		scroll = app6.loadImage("tesla/imagenes/paraBajar.png");
+		if (app6.mouseX > 0 && app6.mouseX < 414 && app6.mouseY > 691 && app6.mouseY < 896) {
+			app6.image(scroll, posX, 691, 414, 205);
+			if (app6.mouseY > 791 && app6.mouseY < 1281 && posY1 > -400) {
+				posY1 -= 20;
+
+			}
+
+		}
+
+	}
+	
+	public void subirScroll() {
+		scrollUp = app6.loadImage("tesla/imagenes/paraSubir.png");
+		if(app6.mouseX > 0 && app6.mouseX < 414 && app6.mouseY > 0 && app6.mouseY < 205) {
+			app6.image(scrollUp, 0 , 0, 414, 205);
+			if(app6.mouseY > 0 && app6.mouseY <100 && posY1 < 0) {
+				posY1 += 20;
+			}
+		}
+	}*/
+
+	public void modelX() {
+		modelX = app6.loadImage("tesla/imagenes/modelX.png");
+		app6.image(modelX, posX, posY, tamX, tamY);
+		//if(app6.mouseX >  )
+
+	}
+
+	public void modelS() {
+		modelS = app6.loadImage("tesla/imagenes/modelS.png");
+		app6.image(modelS, posX, posY, tamX, tamY);
+
+	}
+
+	public void model3() {
+		model3 = app6.loadImage("tesla/imagenes/model3.png");
+		app6.image(model3, posX, posY, tamX, tamY);
+
+	}
+
+}

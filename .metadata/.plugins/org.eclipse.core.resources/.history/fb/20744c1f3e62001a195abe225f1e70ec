@@ -1,0 +1,17 @@
+package tesla;
+
+import processing.core.PApplet;
+
+public class usuarioSinRegistrar {
+	
+	public PApplet app;
+	
+	public usuarioSinRegistrar(PApplet app) {
+		this.app = app;
+	}
+	
+	public void crearRegistro() {
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class usuarioRegistrado extends pantallas {
+
+	
+
+	public usuarioRegistrado(int posX, int posY, int tamX, int tamY) {
+		super(posX, posY, tamX, tamY);
+		// TODO Auto-generated constructor stub
+	}
+
+	private PApplet app1;
+	private PImage pantallaInicio;
+
+	
+
+	public void crearPantalla() {
+		
+		pantallaInicio = app1.loadImage("tesla/imagenes/fondoInicio.jpg");
+		app1.image (pantallaInicio, posX, posY, tamX, t);
+		
+	}
+	
+	public void cambioPantalla() {
+		
+	}
+
+}

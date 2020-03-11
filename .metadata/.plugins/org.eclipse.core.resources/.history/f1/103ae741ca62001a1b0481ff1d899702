@@ -1,0 +1,33 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class usuarioSinRegistrar extends pantallas {
+
+	private PApplet app;
+	private PImage pantRegistro;
+
+	public usuarioSinRegistrar(int posX, int posY, int tamX, int tamY, PApplet app) {
+		super(posX, posY, tamX, tamY);
+
+		this.app = app;
+
+	}
+
+	public void crearPantalla() {
+		pantRegistro = app.loadImage("tesla/imagenes/registro.jpg");
+		app.image(pantRegistro, posX, posY, tamX, tamY);
+
+	}
+
+	public void cambioPantalla() {
+		if (app.mouseX > 36 && app.mouseX < 62 && app.mouseY > 46 && app.mouseY < 82) {
+
+		}
+		if (app.mouseX > 250 && app.mouseX < 390 && app.mouseY > 736 && app.mouseY < 776) {
+
+		}
+	}
+
+}

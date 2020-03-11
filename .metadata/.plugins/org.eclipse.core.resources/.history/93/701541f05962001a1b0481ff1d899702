@@ -1,0 +1,34 @@
+package tesla;
+
+//import controlP5.ControlP5;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+import controlP5.*;
+
+public class usuarioRegistrado extends pantallas {
+
+	PApplet app1;
+	private PImage pantInicio;
+	private ControlP5 cp5;
+
+	public usuarioRegistrado(int posX, int posY, int tamX, int tamY, PApplet app1) {
+		super(posX, posY, tamX, tamY);
+		this.app1=app1;
+	}
+	
+	public void crearPantalla() {
+		cp5 = new app1.ControlP5(this);
+		pantInicio = app1.loadImage("tesla/imagenes/fondoInicio.jpg");
+		app1.image(pantInicio, posX, posY, tamX, tamY);
+		
+		
+	     
+		
+	}
+	
+	public void cambioPantalla() {
+		
+	}
+
+}

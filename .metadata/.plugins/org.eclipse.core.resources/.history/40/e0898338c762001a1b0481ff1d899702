@@ -1,0 +1,36 @@
+package tesla;
+
+//import controlP5.ControlP5;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class usuarioRegistrado extends pantallas {
+
+	PApplet app1;
+	private PImage pantInicio;
+	private PImage registroGris;
+
+	public usuarioRegistrado(int posX, int posY, int tamX, int tamY, PApplet app1) {
+		super(posX, posY, tamX, tamY);
+		this.app1=app1;
+	}
+	
+	public void crearPantalla() {
+		pantInicio = app1.loadImage("tesla/imagenes/fondoInicio.jpg");
+		app1.image(pantInicio, posX, posY, tamX, tamY);
+	}
+	
+	public void feedback() {
+		if(app1.mouseX > 58 && app1.mouseX < 352 && app1.mouseY > 492 && app1.mouseY < 560) {
+			registroGris = app1.loadImage("tesla/imagenes/registrateGris.png");
+			app1.image(registroGris, 58, 493, 294, 65);
+		}
+	}
+	
+	public void cambioPantalla() {
+		
+	}
+	
+
+}

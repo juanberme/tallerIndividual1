@@ -1,0 +1,33 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class historial extends pantallas {
+	
+	PApplet app5;
+	private PImage historial;
+	private PImage regresar;
+
+	public historial(int posX, int posY, int tamX, int tamY, PApplet app5) {
+		super(posX, posY, tamX, tamY);
+		
+		this.app5 = app5;
+		
+	}
+
+	public void crearPantalla() {
+		historial = app5.loadImage("tesla/imagenes/historial.png");
+		app5.image(historial, posX, posY, tamX, tamY);
+		
+	}
+	
+	public void feedBack() {
+		if(app5.mouseX > 41 && app5.mouseX < 60 && app5.mouseY > 46 && app5.mouseY < 78) {
+			regresar = app5.loadImage("tesla/imagenes/regreso1.png");
+			app5.image(regresar, 42,48,15,30);
+		}
+		//41,48
+	}
+
+}

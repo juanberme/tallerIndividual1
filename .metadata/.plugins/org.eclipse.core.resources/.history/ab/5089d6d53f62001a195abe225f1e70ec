@@ -1,0 +1,28 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class usuarioSinRegistrar {
+	
+	public PApplet app;
+	private int posX;
+	private int posY;
+	private int tamX;
+	private int tamY;
+	private PImage pantRegistro;
+	
+	public usuarioSinRegistrar(int posX, int posY, int tamX, int tamY,PApplet app) {
+		this.app = app;
+		this.posX= posX;
+		this.posY=posY;
+		this.tamX=tamX;
+		this.tamY=tamY;
+	}
+	
+	public void crearRegistro() {
+		pantRegistro = app.loadImage("imagenes/registro.jpg");
+		app.image(pantRegistro, posX, posY,tamX,tamY);
+	}
+
+}

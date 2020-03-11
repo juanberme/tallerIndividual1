@@ -1,0 +1,125 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class compra extends pantallas {
+
+	PApplet app6;
+	PImage menuCompra;
+	PImage modelX;
+	PImage modelS;
+	PImage model3;
+	PImage scroll;
+	PImage comprarGris;
+	PImage compararGris;
+	PImage comprarGrande;
+	PImage scrollUp;
+	PImage seleccion;
+	private int posY1;
+
+	public compra(int posX, int posY, int tamX, int tamY, PApplet app6) {
+		super(posX, posY, tamX, tamY);
+		this.app6 = app6;
+		this.posY1 = posY;
+	}
+
+	public void crearMenu() {
+		menuCompra = app6.loadImage("tesla/imagenes/finalMenu.png");
+		app6.image(menuCompra, posX, posY, tamX, tamY);
+		//comprar gris 1 model3
+		comprarGris = app6.loadImage("tesla/imagenes/comprarChiquitoGris.png");
+		if(app6.mouseX > 76 && app6.mouseX < 196 && app6.mouseY > 301 && app6.mouseY < 335) {
+			app6.image(comprarGris, 78, 301, 118, 33);
+		}
+		//comPARAR gris 1 model3
+		compararGris = app6.loadImage("tesla/imagenes/compararGris.png");
+		if(app6.mouseX > 246 && app6.mouseX < 365 && app6.mouseY > 301 && app6.mouseY < 335) {
+			app6.image(compararGris, 247, 301, 118, 33);
+		}
+		//comprar gris 2 modelS
+		if(app6.mouseX > 76 && app6.mouseX < 196 && app6.mouseY > 544 && app6.mouseY < 578) {
+			app6.image(comprarGris, 78, 544, 118, 33);
+		}
+		//comparar gris 2 modelS
+		if(app6.mouseX > 246 && app6.mouseX < 365 && app6.mouseY > 544 && app6.mouseY < 578) {
+			app6.image(compararGris, 246, 544, 118, 33);
+		}
+		//comprar gris 3 modelX
+		if(app6.mouseX > 76 && app6.mouseX < 196 && app6.mouseY > 784 && app6.mouseY < 817) {
+			app6.image(comprarGris, 75, 784, 118, 33);
+		}
+		//comparar gris 3 modelX
+		if(app6.mouseX > 246 && app6.mouseX < 365 && app6.mouseY > 784 && app6.mouseY < 817) {
+			app6.image(compararGris, 244, 784, 118, 33);
+		}
+		
+		//app6.image(menuCompra, posX, posY1, tamX, 1281);
+		/*hacerScroll();
+		subirScroll();*/
+
+	}
+
+	/*public void hacerScroll() {
+		scroll = app6.loadImage("tesla/imagenes/paraBajar.png");
+		if (app6.mouseX > 0 && app6.mouseX < 414 && app6.mouseY > 691 && app6.mouseY < 896) {
+			app6.image(scroll, posX, 691, 414, 205);
+			if (app6.mouseY > 791 && app6.mouseY < 1281 && posY1 > -400) {
+				posY1 -= 20;
+
+			}
+
+		}
+
+	}
+	
+	public void subirScroll() {
+		scrollUp = app6.loadImage("tesla/imagenes/paraSubir.png");
+		if(app6.mouseX > 0 && app6.mouseX < 414 && app6.mouseY > 0 && app6.mouseY < 205) {
+			app6.image(scrollUp, 0 , 0, 414, 205);
+			if(app6.mouseY > 0 && app6.mouseY <100 && posY1 < 0) {
+				posY1 += 20;
+			}
+		}
+	}*/
+
+	public void modelX() {
+		modelX = app6.loadImage("tesla/imagenes/modelX.png");
+		app6.image(modelX, posX, posY, tamX, tamY);
+		comprarGrande = app6.loadImage("tesla/imagenes/comprarGrande.png");
+		if(app6.mouseX > 23 && app6.mouseX < 390 && app6.mouseY > 723 && app6.mouseY < 787) {
+			app6.image(comprarGrande, 23, 722, 371, 65 );
+		}
+		seleccion = app6.loadImage("tesla/imagenes/selColor.png");
+		if(app6.mouseX > 56 && app6.mouseX < 115 && app6.mouseY > 513 && app6.mouseY < 571 ) {
+			app6.image(seleccion, 46, 505, 68, 68);
+		}
+		
+		
+		
+		//if(app6.mouseX >  )
+
+	}
+
+	public void modelS() {
+		modelS = app6.loadImage("tesla/imagenes/modelS.png");
+		app6.image(modelS, posX, posY, tamX, tamY);
+		comprarGrande = app6.loadImage("tesla/imagenes/comprarGrande.png");
+		if(app6.mouseX > 23 && app6.mouseX < 390 && app6.mouseY > 723 && app6.mouseY < 787) {
+			app6.image(comprarGrande, 23, 722, 371, 65 );
+		}
+
+	}
+
+	public void model3() {
+		model3 = app6.loadImage("tesla/imagenes/model3.png");
+		app6.image(model3, posX, posY, tamX, tamY);
+		comprarGrande = app6.loadImage("tesla/imagenes/comprarGrande.png");
+		if(app6.mouseX > 23 && app6.mouseX < 390 && app6.mouseY > 723 && app6.mouseY < 787) {
+			app6.image(comprarGrande, 23, 722, 371, 65 );
+		}
+		
+
+	}
+
+}

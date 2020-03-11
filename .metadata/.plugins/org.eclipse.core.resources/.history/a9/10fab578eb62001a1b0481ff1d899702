@@ -1,0 +1,27 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class menu extends pantallas{
+	
+	private PApplet app4;
+	private PImage menu;
+	
+
+	public menu(int posX, int posY, int tamX, int tamY, PApplet app4) {
+		super(posX, posY, tamX, tamY);
+		this.app4=app4;
+	}
+	
+	public void crearPantalla() {
+		menu = app4.loadImage("tesla/imagenes/menu1.png");
+		app4.image (menu, posX, posY, tamX, tamY);
+	}
+	
+	public void feedBack() {
+		
+	}
+	
+
+}

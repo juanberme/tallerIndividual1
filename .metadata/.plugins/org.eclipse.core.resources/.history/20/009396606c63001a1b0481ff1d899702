@@ -1,0 +1,47 @@
+package tesla;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+
+public class menu extends pantallas{
+	
+	private PApplet app4;
+	private PImage menu;
+	private PImage comprarGris;
+	private PImage historialGris;
+	private PImage cerrarSesion;
+	
+	
+
+	public menu(int posX, int posY, int tamX, int tamY, PApplet app4) {
+		super(posX, posY, tamX, tamY);
+		this.app4=app4;
+	}
+	
+	public void crearPantalla() {
+		menu = app4.loadImage("tesla/imagenes/menu1.png");
+		app4.image (menu, posX, posY, tamX, tamY);
+	}
+	
+	public void feedBack() {
+		if(app4.mouseX > 63 && app4.mouseX < 357 && app4.mouseY > 517 && app4.mouseY < 583) {
+			comprarGris = app4.loadImage("tesla/imagenes/comprarGris.png");
+			app4.image (comprarGris, 63, 519, 294, 65);
+		}
+		
+		if(app4.mouseX > 63 && app4.mouseX <357 && app4.mouseY > 617 && app4.mouseY < 682 ) {
+			historialGris = app4.loadImage("tesla/imagenes/historialGris.png");
+			app4.image(historialGris, 63, 618, 294, 65);
+		}
+		
+		if(app4.mouseX > 34 && app4.mouseX < 78 && app4.mouseY > 45 && app4.mouseY < 87) {
+			menu = app4.loadImage("tesla/imagenes/usuarioGris.png");
+			app4.image(menu, 35, 45, 42,42);
+		}
+	}
+	public void cerraSesion() {
+		cerrarSesion = app4.loadImage("tesla/imagenes/cerrarSesion.png");
+	}
+	
+
+}
